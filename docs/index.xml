@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客标题</title>
+    <link>https://github-young.github.io/maupassant-hugo/</link>
+    <description>Recent content on 博客标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 29 Dec 2019 17:00:32 +0800</lastBuildDate>
+    
+	<atom:link href="https://github-young.github.io/maupassant-hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Readme</title>
+      <link>https://github-young.github.io/maupassant-hugo/post/readme/</link>
+      <pubDate>Sun, 29 Dec 2019 17:00:32 +0800</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/post/readme/</guid>
+      <description>&lt;p&gt;这里的文本会出现在首页，即“阅读全文”之前。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GRE argument 小马笔记（速成）</title>
+      <link>https://github-young.github.io/maupassant-hugo/innerlinks/inner/</link>
+      <pubDate>Fri, 19 Jul 2019 19:23:25 +0800</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/innerlinks/inner/</guid>
+      <description>简介 GRE argument部分有30分钟时间。阅读一段大概150-250词的argument，根据写作指令，写一篇400-600词左右的文章质疑它（个人感觉400-</description>
+    </item>
+    
+    <item>
+      <title>GRE argument 小马笔记（速成）</title>
+      <link>https://github-young.github.io/maupassant-hugo/innerlinks/xiaoma/</link>
+      <pubDate>Fri, 19 Jul 2019 19:23:25 +0800</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/innerlinks/xiaoma/</guid>
+      <description>简介 GRE argument部分有30分钟时间。阅读一段大概150-250词的argument，根据写作指令，写一篇400-600词左右的文章质疑它（个人感觉400-</description>
+    </item>
+    
+    <item>
+      <title>第一篇文章</title>
+      <link>https://github-young.github.io/maupassant-hugo/post/test/</link>
+      <pubDate>Fri, 12 Apr 2019 14:43:12 +0000</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/post/test/</guid>
+      <description>&lt;p&gt;本篇是测试内容。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>https://github-young.github.io/maupassant-hugo/about/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/about/</guid>
+      <description>这里写关于信息。</description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://github-young.github.io/maupassant-hugo/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>搜索</title>
+      <link>https://github-young.github.io/maupassant-hugo/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

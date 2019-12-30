@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Innerlinks on 博客标题</title>
+    <link>https://github-young.github.io/maupassant-hugo/innerlinks/</link>
+    <description>Recent content in Innerlinks on 博客标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 19 Jul 2019 19:23:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://github-young.github.io/maupassant-hugo/innerlinks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GRE argument 小马笔记（速成）</title>
+      <link>https://github-young.github.io/maupassant-hugo/innerlinks/inner/</link>
+      <pubDate>Fri, 19 Jul 2019 19:23:25 +0800</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/innerlinks/inner/</guid>
+      <description>简介 GRE argument部分有30分钟时间。阅读一段大概150-250词的argument，根据写作指令，写一篇400-600词左右的文章质疑它（个人感觉400-</description>
+    </item>
+    
+    <item>
+      <title>GRE argument 小马笔记（速成）</title>
+      <link>https://github-young.github.io/maupassant-hugo/innerlinks/xiaoma/</link>
+      <pubDate>Fri, 19 Jul 2019 19:23:25 +0800</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/innerlinks/xiaoma/</guid>
+      <description>简介 GRE argument部分有30分钟时间。阅读一段大概150-250词的argument，根据写作指令，写一篇400-600词左右的文章质疑它（个人感觉400-</description>
+    </item>
+    
+  </channel>
+</rss>
