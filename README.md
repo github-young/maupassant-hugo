@@ -83,23 +83,37 @@ hugo server --disableFastRender
 
 ## 进阶配置
 
-### 代码高亮
+### 自定义文章摘要
 
-从Hugo v0.60.0开始，默认使用 `` Goldmark `` 渲染MD文件，并且默认开启了代码高亮，所以该主题原来的代码高亮兼容出现问题，
-经过取舍，最终还是选用了Hugo原生的代码高亮方式，去掉了原来主题自带的基于JS的代码高亮。
-
-新的Hugo内置的代码高亮使用非常简单，默认不用任何配置就可以，如果你需要开启行号、或者更换代码样式，可以参考如下配置：
+该主题采用了Hugo内置的摘要支持，大家可以通过 `` <!--more--> `` 自定义自己的摘要，也可以使用自动摘要，使用自动摘要时，可以在 `` config.toml `` 中设置摘要的长度
 
 ```toml
-[markup]
-  [markup.highlight]
-    lineNos = true
-    style = "monokai"
+# 默认是70
+summaryLength = 140 
 ```
 
-更多配合和样式参考:
-[Configure Markup](https://gohugo.io/getting-started/configuration-markup)
-[Syntax Highlighting](https://gohugo.io/content-management/syntax-highlighting/)
+### 不蒜子页面计数器支持
+
+该主题支持不蒜子这个极简的页面计数器支持，如果要启用不蒜子，可以在 `` config.toml `` 里添加如下配置即可。
+
+```toml
+[params]
+  busuanzi = true
+```
+
+### 文章归档支持
+
+Hugo默认是不支持生成归档文件的，需要自己实现。该主题已经实现了文章归档，只需要在新建 `` content/archives/index.md `` 文件，文件内容为：
+
+```md
+title: "归档"
+description: 描述。
+type: archives
+```
+
+`` title ``和`` description ``都可以换成你自己的，但是`` type ``必须是`` archives ``。
+
+`` content/archives/index.md `` 表示在`` content/archives/ `` 目录下的`` index.md ``文件。
 
 ### 自定义菜单
 
@@ -118,6 +132,54 @@ hugo server --disableFastRender
 ```
 
 `` identifier ``标志符必须是唯一的，不能重复；`` weight ``用于排序，值越小越靠前。
+
+### 关于分类的名称转为小写的问题
+
+`Hugo 0.55` 版本之前，会有分类转成小写的问题，Hugo提供了 `` preserveTaxonomyNames `` 配置，把它设置为 `` true `` 就可以了保持原来分类的名字了。
+在 `` Hugo 0.55 `` 这个版本，[hugo 移除了 preserveTaxonomyNames 配置](https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies)，
+模板已经默认获取 tag 和 categories 的原始字符用来展示，大小写的问题已经优雅的解决了。
+
+### 禁止URL路径小写
+
+默认情况下，URL字符串里的字母都是小写的，这对于分类名、标签名是大写的来说，博客迁移后（比如从Hexo到Hugo），原来的链接就失效了，
+为了解决这个问题，Hugo提供了 `` disablePathToLower `` 配置。
+
+```toml
+## 是否禁止URL Path转小写
+disablePathToLower = true
+```
+
+### 添加了部分自定义的shortcode
+
+> 这个 `` shortcode `` 其实是Hugo内嵌html的方式。但我认为这种方式太过愚蠢，造成了不必要的麻烦。
+
+- divRight
+- span
+- hr
+- Octopress blockquote (blockquote.html)
+- Wikipedia Link Generator (wp.html)
+- youku（youku.html）
+```
+{{< youku id="_XMzcxODQ2NjM2NA==" autoplay="true" >}}
+```
+
+### 代码高亮
+
+从Hugo v0.60.0开始，默认使用 `` Goldmark `` 渲染MD文件，并且默认开启了代码高亮，所以该主题原来的代码高亮兼容出现问题，
+经过取舍，最终还是选用了Hugo原生的代码高亮方式，去掉了原来主题自带的基于JS的代码高亮。
+
+新的Hugo内置的代码高亮使用非常简单，默认不用任何配置就可以，如果你需要开启行号、或者更换代码样式，可以参考如下配置：
+
+```toml
+[markup]
+  [markup.highlight]
+    lineNos = true
+    style = "monokai"
+```
+
+更多配合和样式参考:
+[Configure Markup](https://gohugo.io/getting-started/configuration-markup)
+[Syntax Highlighting](https://gohugo.io/content-management/syntax-highlighting/)
 
 ###  文章目录（大纲）
 
@@ -153,7 +215,7 @@ type: "search"
 ```toml
 [[params.links]]
   title = "GitHub"
-  name = GitHub"
+  name = "GitHub"
   url = "https://github.com/"
 [[params.links]]
   title = "TUNA镜像"
@@ -189,20 +251,6 @@ type: "search"
 googleAnalytics = "GA ID"
 ```
 
-### 文章归档支持
-
-Hugo默认是不支持生成归档文件的，需要自己实现。该主题已经实现了文章归档，只需要在新建 `` content/archives/index.md `` 文件，文件内容为：
-
-```md
-title: "归档"
-description: Android资深工程师 ，Go和Java打杂师，《Android Gradle权威指南》作者，Android官方技术文档译者
-type: archives
-```
-
-`` title ``和`` description ``都可以换成你自己的，但是`` type ``必须是`` archives ``。
-
-`` content/archives/index.md `` 表示在`` content/archives/ `` 目录下的`` index.md ``文件
-
 ### Disqus
 
 该主题支持Disqus评论，如果要启用Disqus，可以在 `` config.toml `` 里添加如下配置即可.
@@ -230,15 +278,6 @@ disqusShortname = "yourdiscussshortname"
 2. `` url `` 全链接URL路径的方式。
 3. `` title `` 按页面title标题的方式。
 
-### 自定义文章摘要
-
-该主题采用了Hugo内置的摘要支持，大家可以通过 `` <!--more--> `` 自定义自己的摘要，也可以使用自动摘要，使用自动摘要时，可以在 `` config.toml `` 中设置摘要的长度
-
-```toml
-# 默认是70
-summaryLength = 140 
-```
-
 ### 开启版权声明
 
 该主题支持开启版权声明，如果要启用版权声明，可以在 `` config.toml `` 里添加如下配置即可。
@@ -253,31 +292,6 @@ summaryLength = 140
 
 其他还有几个不常用，这里就不再赘述了。
 
-### 不蒜子页面计数器支持
-
-该主题支持不蒜子这个极简的页面计数器支持，如果要启用不蒜子，可以在 `` config.toml `` 里添加如下配置即可。
-
-```toml
-[params]
-  busuanzi = true
-```
-
-### 关于分类的名称转为小写的问题
-
-`Hugo 0.55` 版本之前，会有分类转成小写的问题，Hugo提供了 `` preserveTaxonomyNames `` 配置，把它设置为 `` true `` 就可以了保持原来分类的名字了。
-在 `` Hugo 0.55 `` 这个版本，[hugo 移除了 preserveTaxonomyNames 配置](https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies)，
-模板已经默认获取 tag 和 categories 的原始字符用来展示，大小写的问题已经优雅的解决了。
-
-### 禁止URL路径小写
-
-默认情况下，URL字符串里的字母都是小写的，这对于分类名、标签名是大写的来说，博客迁移后（比如从Hexo到Hugo），原来的链接就失效了，
-为了解决这个问题，Hugo提供了 `` disablePathToLower `` 配置。
-
-```toml
-## 是否禁止URL Path转小写
-disablePathToLower = true
-```
-
 ### 自定义CSS&JS
 
 ```
@@ -287,15 +301,6 @@ disablePathToLower = true
   # if ['custom.css'], load '/static/css/custom.css' file
   customJS = ['douban.js']
   # if ['custom.js'], load '/static/js/custom.js' file
-```
-
-### 添加了部分自定义的shortcode
-
-* Octopress blockquote (blockquote.html)
-* Wikipedia Link Generator (wp.html)
-* youku（youku.html）
-```
-{{< youku id="_XMzcxODQ2NjM2NA==" autoplay="true" >}}
 ```
 
 ### 绘图支持
