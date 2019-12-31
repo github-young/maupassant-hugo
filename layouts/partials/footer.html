@@ -1,8 +1,13 @@
 <footer id="footer">
     <div class="container">
-        &copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }} By {{ .Site.Author.name }}</a>.
-        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
-        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        &copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }}</a> By <a rel="nofollow noreferer noopener" href="{{ .Site.Author.github }}">{{ .Site.Author.name }}</a>.
+        <br>
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo {{ hugo.Version }}</a>.
+        Based on theme <a href="https://github.com/github-young/maupassant-hugo/" target="_blank">maupassant</a>.
+        <br>
+        {{ if .Site.Params.busuanzi }}
+        访客 <span id="busuanzi_value_site_uv"></span> 人次 | 访问 <span id="busuanzi_value_site_pv"></span> 次
+        {{ end }}
         {{ if .Site.Params.showHostPage }}
         Hosted by <a rel="nofollow noreferer noopener" href="https://pages.coding.me" target="_blank">Coding Pages</a>.
         {{ end }}
