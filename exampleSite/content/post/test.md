@@ -1,7 +1,9 @@
 +++
 title = "第一篇文章"
 date = 2019-04-12T14:43:12Z
-postauthor = ["xy"]
+categories=["category"]
+tags=["tag1", "tag2"]
+postauthor = ["test author"]
 draft = false
 +++
 

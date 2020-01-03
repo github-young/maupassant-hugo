@@ -32,6 +32,14 @@
         <div class="post-content">
             {{ .Content }}
         </div>
+        
+        {{ if isset .Params "postauthor" }}
+        {{ if not (eq (len .Params.postauthor) 0) }}
+            {{ range .Params.postauthor }}
+            <p class="post-meta-center">~~By: {{ . }}~~</p>
+            {{ end }}
+        {{ end }}
+        {{ end }}
 
         {{ partial "copyright" .}}
 
