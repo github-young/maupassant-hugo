@@ -296,6 +296,13 @@ textarea {
     text-align:left;
     display: inline-block;
 }
+.post-meta-center {
+    padding:0;
+    /* margin:0px 0 0; */
+    color:#999;
+    text-align:center;
+    /* display: inline-block; */
+}
 .meta-category a {
     position: relative;
     margin-left: 1.5em;

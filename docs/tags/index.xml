@@ -29,5 +29,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>tag1</title>
+      <link>https://github-young.github.io/maupassant-hugo/tags/tag1/</link>
+      <pubDate>Fri, 12 Apr 2019 14:43:12 +0000</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/tags/tag1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag2</title>
+      <link>https://github-young.github.io/maupassant-hugo/tags/tag2/</link>
+      <pubDate>Fri, 12 Apr 2019 14:43:12 +0000</pubDate>
+      
+      <guid>https://github-young.github.io/maupassant-hugo/tags/tag2/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
