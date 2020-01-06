@@ -19,7 +19,7 @@ draft=false
 
 下面是一个 `` itemize `` 列表（你也可以把 `-` 换成 ` 1. ` 来得到一个 `` enumerate `` 列表）：
 
-- 如要插入链接，请这样使用：你可以在[这里](https://guides.github.com/features/mastering-markdown/)学习使用markdown。
+- 如要插入链接，请这样使用：你可以在[这里](https://guides.github.com/features/mastering-markdown/)学习使用markdown。如果要插入站内链接，如 `` innerlinks `` 里的网页，可以这样使用：[站内链接](/maupassant-hugo/innerlinks/xiaoma/)。
 - 如要插图，请把图片放到 `` fig `` 文件夹，插图时这样使用：
    ![图片名](/maupassant-hugo/fig/sine.png)
 - 如要插入引用文字或小段注解，请这样使用：
