@@ -36,7 +36,9 @@ draft=false
    ```
 - 如果要使用一些html语法，比如改变字体颜色、居中对齐等等，请自行阅读Hugo的 `` shortcodes `` 的文档（这也是我吐槽Hugo的一点...）。这里只给几个示例：
    - 字体颜色：{{< span color="red" >}} 这里是红色 {{< /span >}}
-   - 居中对齐：{{< p style="text-align:center" >}} 这里是居中文字 {{< /p >}}
+   - 居中对齐：
+
+{{< p text-align="center" >}} 这里是居中文字 {{< /p >}}
 
 这里插入[内链](/maupassant-hugo/innerlinks/xiaoma/)。
 
