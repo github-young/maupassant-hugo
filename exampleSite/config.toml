@@ -3,13 +3,13 @@ languageCode = "zh-CN"
 title = "博客标题"
 theme = "maupassant-hugo"
 
+CanonifyUrls =  true
 ## 是否禁止URL Path转小写
 disablePathToLower = true
-
 hasCJKLanguage = true
 summaryLength = 80
 
-googleAnalytics = ""  # UA-XXXXXXXX-X
+#googleAnalytics = ""  # UA-XXXXXXXX-X
 #disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要和utteranc同时开启
 
 [author]
@@ -77,6 +77,10 @@ googleAnalytics = ""  # UA-XXXXXXXX-X
 
 ## 配置代码高亮
 [markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     lineNos = true
     style = "monokai"

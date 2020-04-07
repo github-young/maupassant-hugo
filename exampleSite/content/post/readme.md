@@ -23,7 +23,7 @@ draft=false
 
 - 如要插入链接，请这样使用：你可以在[这里](https://guides.github.com/features/mastering-markdown/)学习使用markdown。如果要插入站内链接，如 `` innerlinks `` 里的网页，可以这样使用：[站内链接](/maupassant-hugo/innerlinks/xiaoma/)。
 - 如要插图，请把图片放到 `` fig `` 文件夹，插图时这样使用：
-   ![图片名](/maupassant-hugo/fig/sine.png)
+   ![图片名](/fig/sine.png)
 - 如要插入引用文字或小段注解，请这样使用：
    > 这是引用文字，这是引用文字，这是引用文字，这是引用文字，这是引用文字，这是引用文字，这是引用文字，这是引用文字，这是引用文字，这是引用文字。
 - 如要插入代码，请这样使用：
@@ -41,5 +41,7 @@ draft=false
 {{< p text-align="center" >}} 这里是居中文字 {{< /p >}}
 
 这里插入[内链](/maupassant-hugo/innerlinks/xiaoma/)。
+
+**更新：** 现在修改了 `` config.toml `` 里的 `` markup.goldmark.renderer `` 项之后，可以正常使用html了。
 
 ---
