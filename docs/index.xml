@@ -6,7 +6,7 @@
     <description>Recent content on 博客标题</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 29 Dec 2019 17:00:32 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://github-young.github.io/maupassant-hugo/index.xml" rel="self" type="application/rss+xml" />
     
@@ -44,7 +44,7 @@
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://github-young.github.io/maupassant-hugo/about/</guid>
-      <description>这里写关于信息。</description>
+      <description>这里写关于信息。 ~~By: xy~~</description>
     </item>
     
     <item>
